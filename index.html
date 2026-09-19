@@ -462,11 +462,11 @@ footer .border-gray-800{border-color:rgba(255,255,255,.12)!important}
   background:linear-gradient(180deg,#fff,#f8fcfc)!important;
 }
 
-/* Floating compact review toast */
+/* Compact review slider below hero */
 .floating-review-toast{
-  position:fixed;right:16px;top:52%;transform:translateY(-50%);
-  width:282px;max-width:calc(100vw - 28px);z-index:1050;
-  pointer-events:auto;
+  position:relative;right:auto;top:auto;transform:none;
+  width:282px;max-width:calc(100vw - 28px);z-index:10;
+  pointer-events:auto;margin:18px auto 6px;
 }
 .floating-review-card{
   position:relative;overflow:hidden;
@@ -504,7 +504,7 @@ footer .border-gray-800{border-color:rgba(255,255,255,.12)!important}
 
 @media(max-width:768px){
   .hero-section{min-height:540px}
-  .floating-review-toast{right:7px;top:55%;width:244px;max-width:calc(100vw - 14px)}
+  .floating-review-toast{right:auto;top:auto;width:244px;max-width:calc(100vw - 20px);margin:14px auto 4px}
   .floating-review-card{padding:7px 9px 6px;border-radius:14px}
   .review-toast-text{font-size:10.6px;line-height:1.48;min-height:31px;-webkit-line-clamp:2}
   .review-toast-area{max-width:140px}
@@ -512,7 +512,7 @@ footer .border-gray-800{border-color:rgba(255,255,255,.12)!important}
 }
 @media(max-width:480px){
   header h1{font-size:1.05rem!important;white-space:nowrap}
-  .floating-review-toast{top:56%;width:230px}
+  .floating-review-toast{top:auto;width:230px;margin:12px auto 2px}
   .review-toast-label{font-size:8.5px;padding:3px 6px}
   .review-toast-score{font-size:9px}
   .review-toast-stars{font-size:8.5px}
@@ -617,6 +617,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
     </section>
+
+
+    
+
+    <!-- Compact Review Slider Below Hero (sample placeholders – replace with verified customer feedback before publishing) -->
+    <aside class="floating-review-toast" id="floating-review-toast" aria-live="polite" aria-label="آراء العملاء">
+        <div class="floating-review-card" id="floating-review-card">
+            <div class="review-toast-top">
+                <span class="review-toast-label"><i class="fas fa-comment-dots"></i> رأي عميل</span>
+                <span class="review-toast-score"><b id="review-toast-score">4.9</b>
+                    <span class="review-toast-stars" id="review-toast-stars"></span>
+                </span>
+            </div>
+            <p class="review-toast-text" id="review-toast-text">فريق منظم والتغليف كان ممتاز، وكل العفش وصل بدون خدوش.</p>
+            <div class="review-toast-footer">
+                <div class="review-toast-person">
+                    <strong class="review-toast-name" id="review-toast-name">أحمد شريف</strong>
+                    <span class="review-toast-area" id="review-toast-area">نقل شقة - مدينة نصر</span>
+                </div>
+                <span class="review-toast-icon"><i class="fas fa-truck-moving"></i></span>
+            </div>
+            <div class="review-toast-progress"><span id="review-toast-progress"></span></div>
+        </div>
+    </aside>
+
     
     <!-- About Section -->
     <section class="py-16 bg-white">
@@ -1257,31 +1282,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </button>
         </div>
     </div>
-
-    
-
-    <!-- Floating Compact Reviews (sample placeholders – replace with verified customer feedback before publishing) -->
-    <aside class="floating-review-toast" id="floating-review-toast" aria-live="polite" aria-label="آراء العملاء">
-        <div class="floating-review-card" id="floating-review-card">
-            <div class="review-toast-top">
-                <span class="review-toast-label"><i class="fas fa-comment-dots"></i> رأي عميل</span>
-                <span class="review-toast-score"><b id="review-toast-score">4.9</b>
-                    <span class="review-toast-stars" id="review-toast-stars"></span>
-                </span>
-            </div>
-            <p class="review-toast-text" id="review-toast-text">فريق منظم والتغليف كان ممتاز، وكل العفش وصل بدون خدوش.</p>
-            <div class="review-toast-footer">
-                <div class="review-toast-person">
-                    <strong class="review-toast-name" id="review-toast-name">أحمد شريف</strong>
-                    <span class="review-toast-area" id="review-toast-area">نقل شقة - مدينة نصر</span>
-                </div>
-                <span class="review-toast-icon"><i class="fas fa-truck-moving"></i></span>
-            </div>
-            <div class="review-toast-progress"><span id="review-toast-progress"></span></div>
-        </div>
-    </aside>
-
-    <!-- Confirmation Modal -->
+<!-- Confirmation Modal -->
     <div id="confirmation-modal">
         <div class="modal-content p-8 text-center relative">
             <button id="close-modal-btn" class="absolute top-2 right-4 text-3xl text-gray-500 hover:text-gray-800 leading-none">&times;</button>
